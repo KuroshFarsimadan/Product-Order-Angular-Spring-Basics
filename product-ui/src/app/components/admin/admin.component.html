@@ -1,0 +1,25 @@
+<p>Admin page test</p>
+<div class="container">
+    <table class="table table-bordered table-inverse">
+      <tr>
+        <th>Owner Name</th>
+        <th>Email</th>
+        <th>Model</th>
+        <th class="text-right">Purchase Price</th>
+      </tr>
+      <tr *ngFor="let product of products">
+        <td>
+          {{product.name}}
+        </td>
+        <td>
+          {{product.email}}
+        </td>
+        <td>
+          {{product.model}}
+        </td>
+        <td class="text-right">
+          {{product.purchasePrice}}
+        </td>
+      </tr>
+    </table>
+</div>
