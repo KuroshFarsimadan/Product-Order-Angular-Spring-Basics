@@ -6,6 +6,7 @@
         <th>Email</th>
         <th>Model</th>
         <th class="text-right">Purchase Price</th>
+        <th class="text-right">View</th>
       </tr>
       <tr *ngFor="let product of products">
         <td>
@@ -18,7 +19,7 @@
           {{product.model}}
         </td>
         <td class="text-right">
-          {{product.purchasePrice}}
+          <a [routerLink]="['/admin/view', product.id]">{{product.id}}</a>
         </td>
       </tr>
     </table>

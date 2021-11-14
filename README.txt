@@ -31,3 +31,7 @@ http://localhost:8080/api/v1/products
     "orderDate": "10-10-2020",
     "hasBeenContacted": true
 }
+
+////////////////////////////////////////////////////////////
+Angular 
+1. ng build --prod for building minified UI files
