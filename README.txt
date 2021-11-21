@@ -35,3 +35,5 @@ http://localhost:8080/api/v1/products
 ////////////////////////////////////////////////////////////
 Angular 
 1. ng build --prod for building minified UI files
+2. Make sure that the latest built files are in the product-ui dist folder root
+3. Run the Spring Boot application on Tomcat and run the Angular application inside the product-ui folder using "ng serve --proxy-config proxy.conf.json" (instead of ng serve) so that Angular app runs with proxy settings

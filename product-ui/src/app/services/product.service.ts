@@ -13,14 +13,27 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
+
   getProducts() {
-    return this.http.get('/server/api/v1/products');
+    let token = localStorage.getItem(
+      'access_token'
+    )
+    return this.http.get('/server/api/v1/products',
+      {
+        headers: new HttpHeaders().set('Authorization', 'Bearer ' + token)
+      }
+    );
   }
 
   getProduct(id: number) {
-    return this.http.get('/server/api/v1/products/' + id);
+    let token = localStorage.getItem(
+      'access_token'
+    )
+    return this.http.get('/server/api/v1/products/' + id,
+    {
+      headers: new HttpHeaders().set('Authorization', 'Bearer ' + token)
+    });
   }
-
 
   createProduct(product: any) {
     let body = JSON.stringify(product);

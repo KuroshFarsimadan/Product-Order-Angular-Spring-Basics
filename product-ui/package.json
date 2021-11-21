@@ -18,6 +18,8 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "@types/auth0-js": "^9.14.5",
+    "auth0-js": "^9.18.0",
     "express-http-proxy": "^1.6.3",
     "port": "^0.8.1",
     "rxjs": "~7.4.0",

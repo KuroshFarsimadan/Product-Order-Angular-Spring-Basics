@@ -8,13 +8,17 @@ import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductOrderDetailsComponent } from './components/product-order-details/product-order-details.component';
+import { CallbackComponent } from './components/callback/callback.component';
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './services/auth.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     HomeComponent,
-    ProductOrderDetailsComponent
+    ProductOrderDetailsComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,7 @@ import { ProductOrderDetailsComponent } from './components/product-order-details
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ProductService],
+  providers: [ProductService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
