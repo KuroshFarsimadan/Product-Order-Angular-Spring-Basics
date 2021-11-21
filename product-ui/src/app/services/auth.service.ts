@@ -8,8 +8,8 @@ export class AuthService {
 
   /* Replace clientID and domain with your own */
   auth0 = new auth0.WebAuth({
-    clientID: '{your-client-id}',
-    domain: '{your-domain}',
+    clientID: 'your-client-id',
+    domain: 'your-domain',
     responseType: 'token id_token',
     audience: 'http://localhost:8080',
     redirectUri: 'http://localhost:4200/callback',
